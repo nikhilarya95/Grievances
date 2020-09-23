@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2019 at 10:47 PM
+-- Generation Time: Sep 23, 2020 at 04:18 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -31,8 +31,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `grievancesdetails` (
   `Uemail` varchar(40) NOT NULL,
   `s_id` int(20) NOT NULL,
+  `type` varchar(15) NOT NULL,
   `Gid` varchar(15) NOT NULL,
-  `Grievance` varchar(350) NOT NULL,
+  `comments` varchar(350) NOT NULL,
   `Category` varchar(15) NOT NULL,
   `Scategory` varchar(30) NOT NULL,
   `GpostDate` date NOT NULL,
@@ -46,74 +47,50 @@ CREATE TABLE `grievancesdetails` (
 -- Dumping data for table `grievancesdetails`
 --
 
-INSERT INTO `grievancesdetails` (`Uemail`, `s_id`, `Gid`, `Grievance`, `Category`, `Scategory`, `GpostDate`, `GacceptedDate`, `Gsolution`, `GclosedDate`, `Gstatus`) VALUES
-('nikhilarya95@gmail.com', 1, 'Gid_001', 'thik', 'Department', 'SpecificCategory', '2019-12-04', '0000-00-00', '', '0000-00-00', 0),
-('surajraj506@gmail.com', 2, 'Gid_002', 'ddfddf', 'Department', 'SpecificCategory', '2019-12-04', '0000-00-00', 'sssdfsfs', '0000-00-00', 0),
-('sura95@gmail.com', 3, 'Gid_003', 'rrttrdfg', 'Department', 'SpecificCategory', '2019-12-04', '0000-00-00', '', '0000-00-00', 0),
-('nilarya95@gmail.com', 4, 'Gid_004', 'ggdhs', 'College', 'Bharathi', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
-('khilarya95@gmail.com', 5, 'Gid_005', 'hdshsddhdh', 'Hostel', 'Vaigai', '2019-12-05', '0000-00-00', 'nikhil', '0000-00-00', 0),
-('khilarya95@gmail.com', 6, 'Gid_006', 'hdshsddhdh', 'Hostel', 'Vaigai', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
-('khilarya95@gmail.com', 7, 'Gid_007', 'hdshsddhdh', 'Hostel', 'Vaigai', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
-('ilarya95@gmail.com', 8, 'Gid_008', 'dffs', 'Category', 'SpecificCategory', '2019-12-05', '0000-00-00', 'jgjfhfhgg', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 9, 'Gid_009', 'bcvc', 'College', 'SpecificCategory', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 10, 'Gid_0010', 'mnv', 'College', 'SpecificCategory', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 11, 'Gid_0011', 'jhj', 'Department', 'SpecificCategory', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 12, 'Gid_0012', 'nb v', 'College', 'SpecificCategory', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
-('nilarya95@gmail.com', 123, 'hkj', 'gjhghj', 'College', 'General', '2019-12-04', '2019-12-10', 'jgjgjg', '2019-12-09', 0),
-('ilarya95@gmail.com', 344, 'fdgdg', 'fgfdvg', 'Department', 'Chemical Engineering', '2019-12-04', '2019-12-11', 'hhhhhhh', '2019-12-10', 1),
-('nikhilarya95@gmail.com', 345, 'Gid_00345', 'hfhgfgfhgc', 'Department', 'SpecificCategory', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 346, 'Gid_00346', 'hgjhvhvh', 'Department', 'SpecificCategory', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 347, 'Gid_00347', 'hjkhk', 'Department', 'Civil Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 348, 'Gid_00348', 'jhhjgjh', 'Department', 'Mechanical Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 349, 'Gid_00349', 'hgjhgj', 'Department', 'Mechatronics Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 350, 'Gid_00350', 'sdffd', 'Department', 'EEE', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 351, 'Gid_00351', 'sdffd', 'Department', 'EEE', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 352, 'Gid_00352', 'dvdfvd', 'Department', 'E and I', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 353, 'Gid_00353', 'sfsdf', 'Department', 'ECE', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 354, 'Gid_00354', 'vbvc', 'Department', 'Chemical Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 355, 'Gid_00355', 'sdfdfdg', 'Department', 'Automobile Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 356, 'Gid_00356', 'fddgd', 'Department', 'E & I', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 357, 'Gid_00357', 'ghjgj', 'Department', 'Chemistry', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 358, 'Gid_00358', 'ghjgj', 'Department', 'Chemistry', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 359, 'Gid_00359', 'jhjkk', 'Department', 'Physics', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 360, 'Gid_00360', 'khhjg', 'Department', 'Food Technology', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 361, 'Gid_00361', 'jgjhgjgh', 'Department', 'CSE', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 362, 'Gid_00362', 'hkhj', 'Department', 'Computer Application', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 363, 'Gid_00363', 'sdfsdd', 'College', '', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 364, 'Gid_00364', 'kj', 'Department', '', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 365, 'Gid_00365', 'sdsfsfdsd', 'Libary', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 366, 'Gid_00366', 'dfgd', 'Libary', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 367, 'Gid_00367', 'rtryryr', 'Department', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 368, 'Gid_00368', 'nnjjn', 'Libary', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 369, 'Gid_00369', 'nnbnb', 'Hostel', 'Vaigai', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 370, 'Gid_00370', 'nn', 'Hostel', 'Valluvar', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 371, 'Gid_00371', 'ggugu', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 372, 'Gid_00372', 'mbbmb', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 373, 'Gid_00373', 'njnj', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 374, 'Gid_00374', 'mmnnm', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 375, 'Gid_00375', 'shjkhd', 'Department', 'Dheeran', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 376, 'Gid_00376', 'jhksjhs', 'Other', 'Dheeran', '2019-12-08', '0000-00-00', 'thik hai', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 377, 'Gid_00377', 'kjklljj', 'Other', 'Dheeran', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 378, 'Gid_00378', 'nbnj', 'Other', 'Dheeran', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 379, 'Gid_00379', 'knkjdkf', 'College', 'Dheeran', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 380, 'Gid_00380', 'kjlfkckj', 'Department', 'Dheeran', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 381, 'Gid_00381', 'dfdgd', 'College', 'Dheeran', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 382, 'Gid_00382', 'vcx', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 383, 'Gid_00383', 'dfg', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 384, 'Gid_00384', 'dsdfsf', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 385, 'Gid_00385', 'fgfg', 'Department', 'Mechatronics Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 386, 'Gid_00386', 'jhjkgjg', 'Hostel', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 387, 'Gid_00387', 'jhjkgjg', 'Hostel', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 388, 'Gid_00388', 'khkgjk', 'Department', 'General', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 389, 'Gid_00389', 'khkgjk', 'Department', 'Chemical Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 390, 'Gid_00390', 'gfhgf', 'College', 'Transport Office', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 391, 'Gid_00391', 'jhjgj', 'Department', 'Mathematics', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 392, 'Gid_00392', 'jggg', 'College', '', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 393, 'Gid_00393', 'jhjhu', 'College', 'Libary', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 394, 'Gid_00394', 'iyuitug', 'College', '', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 395, 'Gid_00395', 'dvgdfg', 'Department', 'Chemistry', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 396, 'Gid_00396', ',,', 'College', 'Transport Office', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
-('nikhilarya95@gmail.com', 397, 'Gid_00397', 'gfdgfd', 'Department', 'Physics', '2019-12-09', '0000-00-00', '', '0000-00-00', 0);
+INSERT INTO `grievancesdetails` (`Uemail`, `s_id`, `type`, `Gid`, `comments`, `Category`, `Scategory`, `GpostDate`, `GacceptedDate`, `Gsolution`, `GclosedDate`, `Gstatus`) VALUES
+('nikhilarya95@gmail.com', 1, 'grievance', 'Gid_001', 'thik', 'Department', 'SpecificCategory', '2019-12-04', '0000-00-00', 'thik ho gaya', '0000-00-00', 0),
+('surajraj506@gmail.com', 2, 'grievance', 'Gid_002', 'ddfddf', 'Department', 'SpecificCategory', '2019-12-04', '0000-00-00', 'sssdfsfs', '0000-00-00', 0),
+('sura95@gmail.com', 3, 'feedback', 'Gid_003', 'rrttrdfg', 'Department', 'SpecificCategory', '2019-12-04', '0000-00-00', '', '0000-00-00', 1),
+('nilarya95@gmail.com', 4, 'grievance', 'Gid_004', 'ggdhs', 'College', 'Bharathi', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
+('khilarya95@gmail.com', 5, 'feedback', 'Gid_005', 'hdshsddhdh', 'Hostel', 'Vaigai', '2019-12-05', '0000-00-00', 'nikhil', '0000-00-00', 0),
+('khilarya95@gmail.com', 6, 'grievance', 'Gid_006', 'hdshsddhdh', 'Hostel', 'Vaigai', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
+('khilarya95@gmail.com', 7, 'feedback', 'Gid_007', 'hdshsddhdh', 'Hostel', 'Vaigai', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
+('ilarya95@gmail.com', 8, 'grievance', 'Gid_008', 'dffs', 'Category', 'SpecificCategory', '2019-12-05', '0000-00-00', 'jgjfhfhgg', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 9, 'feedback', 'Gid_009', 'bcvc', 'College', 'SpecificCategory', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 10, 'grievance', 'Gid_0010', 'mnv', 'College', 'SpecificCategory', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 11, 'feedback', 'Gid_0011', 'jhj', 'Department', 'SpecificCategory', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 12, 'feedback', 'Gid_0012', 'nb v', 'College', 'SpecificCategory', '2019-12-05', '0000-00-00', '', '0000-00-00', 0),
+('nilarya95@gmail.com', 123, 'grievance', 'hkj', 'gjhghj', 'College', 'General', '2019-12-04', '2019-12-10', 'jgjgjg', '2019-12-09', 0),
+('ilarya95@gmail.com', 344, 'feedback', 'fdgdg', 'fgfdvg', 'Department', 'Chemical Engineering', '2019-12-04', '2019-12-11', 'hhhhhhh', '2019-12-10', 1),
+('nikhilarya95@gmail.com', 345, 'feedback', 'Gid_00345', 'hfhgfgfhgc', 'Department', 'SpecificCategory', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 346, 'grievance', 'Gid_00346', 'hgjhvhvh', 'Department', 'SpecificCategory', '2019-12-08', '0000-00-00', '', '0000-00-00', 1),
+('nikhilarya95@gmail.com', 347, 'grievance', 'Gid_00347', 'hjkhk', 'Department', 'Civil Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 348, 'grievance', 'Gid_00348', 'jhhjgjh', 'Department', 'Mechanical Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 349, 'grievance', 'Gid_00349', 'hgjhgj', 'Department', 'Mechatronics Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 350, 'grievance', 'Gid_00350', 'sdffd', 'Department', 'EEE', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 351, 'feedback', 'Gid_00351', 'sdffd', 'Department', 'EEE', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 352, 'grievance', 'Gid_00352', 'dvdfvd', 'Department', 'E and I', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 353, 'grievance', 'Gid_00353', 'sfsdf', 'Department', 'ECE', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 354, 'grievance', 'Gid_00354', 'vbvc', 'Department', 'Chemical Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 355, 'grievance', 'Gid_00355', 'sdfdfdg', 'Department', 'Automobile Engineering', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 356, 'grievance', 'Gid_00356', 'fddgd', 'Department', 'E & I', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 357, 'feedback', 'Gid_00357', 'ghjgj', 'Department', 'Chemistry', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 358, 'grievance', 'Gid_00358', 'ghjgj', 'Department', 'Chemistry', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 359, 'grievance', 'Gid_00359', 'jhjkk', 'Department', 'Physics', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 360, 'grievance', 'Gid_00360', 'khhjg', 'Department', 'Food Technology', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 361, 'grievance', 'Gid_00361', 'jgjhgjgh', 'Department', 'CSE', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 362, 'feedback', 'Gid_00362', 'hkhj', 'Department', 'Computer Application', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 363, 'feedback', 'Gid_00363', 'sdfsdd', 'College', '', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 364, 'feedback', 'Gid_00364', 'kj', 'Department', '', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 365, 'feedback', 'Gid_00365', 'sdsfsfdsd', 'Libary', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 366, 'feedback', 'Gid_00366', 'dfgd', 'Libary', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 367, 'feedback', 'Gid_00367', 'rtryryr', 'Department', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 368, 'feedback', 'Gid_00368', 'nnjjn', 'Libary', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 369, 'feedback', 'Gid_00369', 'nnbnb', 'Hostel', 'Vaigai', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 370, 'feedback', 'Gid_00370', 'nn', 'Hostel', 'Valluvar', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 371, 'feedback', 'Gid_00371', 'ggugu', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 372, 'feedback', 'Gid_00372', 'mbbmb', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0),
+('nikhilarya95@gmail.com', 373, 'feedback', 'Gid_00373', 'njnj', 'College', 'Specific Category', '2019-12-08', '0000-00-00', '', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -142,6 +119,7 @@ CREATE TABLE `headdetalis` (
 --
 
 INSERT INTO `headdetalis` (`Authorisedpt`, `Aid`, `Aname`, `Amobile`, `Aemail`, `Apassword`, `ques1`, `ans1`, `ques2`, `ans2`, `AOTP`, `Averification`, `AOTPdate`) VALUES
+('Computer Application', 'uuyyttg', 'hero', '9999999999', 'herolal@gmail.com', 'nikhil@95', 'what is your pet name?', 'kutta', 'what is your favorate city name?', 'patna', '3900625', 0, '2020-09-18 20:49:29'),
 ('Computer Technology(PG)', '00002', 'Nikhil', '9114343212', 'nikhi5@gmail.com', 'nikhil@95', 'Select one', 'as', 'what is your favorate city name?', 'as', '7874866', 0, '2019-12-08 11:28:24'),
 ('Chemical Engineering', '0010', 'Nikhil', '9112322222', 'nikhil10@gmail.com', 'Nikhil@95', 'what is your pet name?', 'dog', 'what is your favorate city name?', 'patna', '1665115', 0, '2019-12-08 08:55:37'),
 ('Food Technology', '0011', 'Nikhil', '9113434345', 'nikhil11@gmail.com', 'Nikhil@95', 'what is your pet name?', 'sdfsfsf', 'what is your pet name?', 'patna', '9819706', 0, '2019-12-08 08:57:45'),
@@ -184,6 +162,9 @@ INSERT INTO `headdetalis` (`Authorisedpt`, `Aid`, `Aname`, `Amobile`, `Aemail`, 
 ('DSBMS', 'jhj', 'fhfhf', '9118789867', 'nikhilary@gmail.com', '', '', '', '', '', '7610351', 0, '2019-12-08 10:34:50'),
 ('DSES', 'jhjhgj', 'fhfhf', '9118789878', 'nikhilarya5@gmail.com', '', '', '', '', '', '9347915', 0, '2019-12-08 10:31:33'),
 ('Computer Application', '18mcr012', 'Nikhil', '9122734062', 'nikhilarya95@gmail.com', '9211skrs44', 'what is your pet name?', 'fan', 'what is your favorate city name?', 'gfd', '3326046', 0, '2019-12-05 11:22:46'),
+('Mechanical Engineering', '188mcr2019', 'nikhil', '9114110942', 'nikhilarya95@outlook.com', '', '', '', '', '', '1525983', 0, '2020-09-12 08:09:11'),
+('Civil Engineering', '188mcr2019', 'Nikhil', '9113110942', 'nikhilya95@gmail.com', '', '', '', '', '', '6769281', 0, '2020-09-12 10:10:39'),
+('Food Technology', '188mcr2019', 'Nikhil', '9113110946', 'ramesh@gmail.com', 'nikhil@95', 'what is your pet name?', 'kutta', 'what is your favorate city name?', 'patna', '5924297', 0, '2020-09-23 14:45:41'),
 ('Food Technology', '18mcr012', 'Nikhil', '9113332222', 'sem5@gmail.com', 'nikhil', 'what is your favorate city name?', 'cat', 'what is your pet name?', 'patna', '8491575', 0, '2019-12-10 02:48:17'),
 ('Civil Engineering', '001', 'sem', '9898989898', 'sem@gmail.com', 'Sem@95', 'what is your pet name?', 'cat', 'what is your pet name?', 'patna', '9651382', 0, '2019-12-08 08:33:24'),
 ('Vaigai', '11111', 'sumit', '9887068432', 'sumit@gmail.com', 'Nikhil@95', 'what is your pet name?', 'cat', 'what is your favorate city name?', 'patna', '9007352', 0, '2019-12-08 07:03:48'),
@@ -217,7 +198,28 @@ INSERT INTO `userotp` (`Uemail`, `UOTP`, `Uverification`, `UOTPdate`) VALUES
 ('nikhilarya95@gmail.com', '697681', 1, '2019-12-10 05:59:56'),
 ('nikhilarya95@gmail.com', '963982', 0, '2019-12-10 05:56:22'),
 ('nikhilarya95@gmail.com', '449245', 0, '2019-12-10 09:46:15'),
-('nikhilarya95@gmail.com', '457685', 0, '2019-12-10 13:58:47');
+('nikhilarya95@gmail.com', '457685', 0, '2019-12-10 13:58:47'),
+('nikhilarya95@gmail.com', '247839', 1, '2019-12-11 18:27:30'),
+('ikhilarya95@gmail.com', '766636', 1, '2019-12-11 19:34:01'),
+('nikhilarya95@gmail.com', '408486', 0, '2020-01-21 15:49:00'),
+('nikhilarya95@gmail.com', '749886', 1, '2020-01-22 01:02:27'),
+('nikhilarya95@gmail.com', '454928', 1, '2020-01-22 01:07:11'),
+('nikhilarya95@gmail.com', '932461', 1, '2020-01-22 01:09:28'),
+('nikhilarya95@gmail.com', '332992', 1, '2020-01-22 01:13:00'),
+('nikhilarya95@gmail.com', '949453', 0, '2020-08-29 09:15:34'),
+('nikhilarya95@gmail.com', '507193', 1, '2020-09-16 14:00:25'),
+('nikhilarya95@gmail.com', '548278', 0, '2020-09-17 03:48:30'),
+('nikhilarya95@gmail.com', '782753', 0, '2020-09-17 04:01:49'),
+('nikhilarya95@gmail.com', '752867', 0, '2020-09-17 04:02:31'),
+('nikhilarya95@gmail.com', '216393', 0, '2020-09-17 04:13:41'),
+('nikhilarya95@gmail.com', '275908', 1, '2020-09-17 08:56:09'),
+('nikhilarya95@gmail.com', '585431', 1, '2020-09-17 09:14:31'),
+('nikhilarya95@gmail.com', '647770', 0, '2020-09-17 09:13:49'),
+('nikhilarya95@gmail.com', '374133', 1, '2020-09-17 09:51:51'),
+('nikhilarya95@gmail.com', '494400', 1, '2020-09-17 09:56:22'),
+('nikhilarya95@gmail.com', '427728', 1, '2020-09-17 09:59:48'),
+('nikhilarya95@gmail.com', '248031', 1, '2020-09-17 10:01:45'),
+('nikhilarya95@gmail.com', '112649', 1, '2020-09-18 14:58:42');
 
 -- --------------------------------------------------------
 
@@ -237,6 +239,7 @@ CREATE TABLE `userverification` (
 --
 
 INSERT INTO `userverification` (`Usid`, `User`, `Umobile`, `Uemail`) VALUES
+('18mcr012', 'Parents', '9113110942', 'ikhilarya95@gmail.com'),
 ('115702921', 'Student', '9113110942', 'ilarya95@gmail.com'),
 ('323', 'Parents', '9113110942', 'khilarya95@gmail.com'),
 ('18mcr012', 'Faculty', '9113110942', 'nhilarya95@gmail.com'),
@@ -282,7 +285,7 @@ ALTER TABLE `userverification`
 -- AUTO_INCREMENT for table `grievancesdetails`
 --
 ALTER TABLE `grievancesdetails`
-  MODIFY `s_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=398;
+  MODIFY `s_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=400;
 
 --
 -- Constraints for dumped tables
