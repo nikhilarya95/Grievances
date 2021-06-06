@@ -84,16 +84,17 @@ include_once("config.php");
     
 </head>
 <body >
-<div id="ver"  class="container-fluid userDetail_msg">
-    
+<div id="ver"  class=" userDetail_msg">
+        <h3 style="color: #1ca4b6;">Please enter detail for grievances/feedback </h3>
+</div>
     <div class="userDetail">
         <p>* Parents should enter ward register Id</p>
         <?php echo form_open('user/user1','id="form1"');?>
 
-        <div  class="form-group"  >
+        <div  class="form-group form_row"  >
         
             <div class="userDetail_type">
-                <select class="form-control " id="" name="usr" value= set_value(usr)>
+                <select  id="" name="usr" value= "set_value(usr)">
                     <option>User</option>
                     <option value="Student">Student</option>
                     <option value="Faculty">Faculty</option>
@@ -101,32 +102,40 @@ include_once("config.php");
                     <option value="Parents">Parents</option>
                     <option value="Alumni">Alumni</option>
                     <option value="Employer">Employer</option>
+                    <option value="Public">Public</option>
                 </select>
                 <?php echo form_error('usr') ?>
             </div>
 
             <div class="userDetail_id">
-                <?php echo form_input(['class'=>'form-control fon','name'=>'id','placeholder'=>'Register No./FID/Employer Id']); ?>
+                <?php echo form_input(['class'=>'form-control fon','name'=>'id','id'=>'userid','value'=>set_value('id'),'placeholder'=>'Register No./FID/Employer Id']); ?>
                 <?php echo form_error('id') ?>
+            </div>
+
+            <div class="userDetail_name">
+                <?php echo form_input(['class'=>'form-control fon','name'=>'username','id'=>'username','value'=>set_value('username'),'placeholder'=>'Enter your name']); ?>
+                <?php echo form_error('username') ?>
             </div>
            
             <div class="userDetail_mobile"> 
-                <?php echo form_input(['class'=>'form-control fon','name'=>'mob','placeholder'=>'Mobile Number']); ?>
+                <?php echo form_input(['class'=>'form-control fon','name'=>'mob','id'=>'mob','value'=>set_value('mob'),'placeholder'=>'Mobile Number']); ?>
                 <?php echo form_error('mob') ?>
             </div>
            
             <div class="userDetail_email"> 
-                <?php echo form_input(['class'=>'form-control fon','name'=>'email','placeholder'=>'Email']); ?>
+                <?php echo form_input(['class'=>'form-control fon','name'=>'email','id'=>'email','value'=>set_value('email'),'placeholder'=>'Email']); ?>
                 <?php echo form_error('email') ?>
             </div>
         
             <div  class="userDetail_button">
+
                 <input   class=" btn btn-info"name="submit_email" type=submit  onClick="verify();" value='Verify Email '>
+                <?php echo anchor('Admin/logout','Back','class="btn btn-info"') ;?>
             </div>
         </div>
         </form>
     </div>
-</div>
+
 
 
 
@@ -145,13 +154,10 @@ function verify()
     document.getElementById("ottp").style.visibility="visible";
 }
 }
-function verif()
-{
 
-    document.getElementById("ottp").style.visibility="hidden";
-}
 
 
 </script>
 </body>
+<?php include('footer.php'); ?>
 </html>

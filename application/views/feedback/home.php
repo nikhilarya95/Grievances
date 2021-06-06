@@ -1,10 +1,13 @@
+<?php include ('popup.php'); ?>
  <?php include ('header.php'); ?>
+ 
 <html>
 <head>
 
 
 
        <link rel="stylesheet" href="<?=base_url();?>assets/css/home.css">
+       
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -14,7 +17,13 @@
 </head>
 <body>
 <div class="container-fluid">
-
+<!-- <div class="popup">
+        <div class="popup__content">
+            <h1 class="popup__text">
+                
+            </h1>
+        </div>
+    </div> -->
 
 <div class="row"style="margin-bottom:0.5%;margin-top:2%;">
         <div class="col-lg-8">

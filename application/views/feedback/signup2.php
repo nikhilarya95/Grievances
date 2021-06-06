@@ -33,7 +33,7 @@
             
            <!-- <i onclick="show();" class="fa fa-eye f" id="eye"></i>-->
             
-            <?php echo  form_password(['class'=>"form-control pas1",'type'=>"password",'value'=>set_value('password1'),'id'=>"pwd",'placeholder'=>"atleast 1 uppercase,1 lowercase,1 digit,1 symbol",'onblur'=>"pas();",'onfocus'=>"cl6();",' name'=>"password1"]);?>
+            <?php echo  form_password(['class'=>"form-control pas1",'type'=>"password",'value'=>set_value('password1'),'id'=>"pwd",'placeholder'=>"Enter Password",'onblur'=>"pas();",'onfocus'=>"cl6();",' name'=>"password1"]);?>
            <!-- <p id="pas_1"></p>--><?php echo form_error('password1') ?>
         </div>
 
@@ -42,7 +42,7 @@
             <?php echo form_label('Confirm Password');?>
             <!--<i class="fa fa-times pass_a "id="pass_1"></i>
              <i class="fa fa-check pass_b"id="pass_2"></i>-->
-             <?php echo  form_password(['class'=>"form-control",'type'=>"password",'value'=>set_value('password2'),'id'=>"bor_4",'placeholder'=>"atleast 1 uppercase,1 lowercase,1 digit,1 symbol",'onblur'=>"pas();",'onfocus'=>"cl4();",' name'=>"password2"]);?>
+             <?php echo  form_password(['class'=>"form-control",'type'=>"password",'value'=>set_value('password2'),'id'=>"bor_4",'placeholder'=>"Enter confirm Password",'onblur'=>"pas();",'onfocus'=>"cl4();",' name'=>"password2"]);?>
             <?php echo form_error('password2') ?>
         </div>  
         

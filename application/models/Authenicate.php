@@ -2,13 +2,15 @@
 class Authenicate extends CI_model
 {
     
-    public function forget($email,$sq1,$sq2,$ans1,$ans2)
+    public function forget($email)
     {
-        $f=$this->db->where(['Aemail'=>$email,'ques1'=>$sq1,'ans1'=>$ans1,'ques2'=>$sq2,'ans2'=>$ans2])
+        $f=$this->db->where(['Aemail'=>$email])
                     ->get('headdetalis');
                     if($f->num_rows())
                     {
-                        return $f->row()->Aemail;
+                        $session=array('Authorisedpt'=>$f->row()->Authorisedpt,'Aname'=>$f->row()->Aname,'Aemail'=>$f->row()->Aemail);
+                        return $session;
+                        // return $f->row()->Aemail;
                     }
                     else
                     {
@@ -21,21 +23,32 @@ class Authenicate extends CI_model
                      ->get('userverification');
                     if($uc->num_rows())
                     {
-                        return true;
+                        $session=array('User'=>$uc->row()->User,'U_name'=>$uc->row()->U_name,'Uemail'=>$uc->row()->Uemail);
+                        return $session;
                     }
                     else
                     {
                         return false;
                     }
     }
-    public function inse($tb,$grei)
+    public function userinsert($tb,$grei)
+    {
+        $this->db->insert($tb,$grei);
+    }
+
+    public function inse($tb,$grei,$email)
 	{
     
-    $this->db->insert($tb,$grei);
+    $this->db->where(['Aemail'=>$email])->update($tb,$grei);
+    }
+    public function inset($tr,$gri)
+	{
+    
+    $this->db->insert($tr,$gri);
     }
     public function updat($em)
     {
-        echo "yyyyy";
+        
         $u_submit = $this->input->post('repss_submit');
         if(isset($u_submit))
         {
@@ -63,7 +76,7 @@ class Authenicate extends CI_model
     public function fotp($f_otp)
     {
         $u=$this->db->where(['AOTP'=>$f_otp])
-                    ->get('headdetalis');
+                    ->get('admin_security_details');
                     if($u->num_rows())
                     {
                         return True;
@@ -89,13 +102,19 @@ class Authenicate extends CI_model
     }*/
     public function getdata($email,$password)
     {   
-        $q=$this->db->where(['Aemail'=>$email,'Apassword'=>$password])
-                    ->get('headdetalis');
+    $this->db->SELECT('*');
+    $this->db->FROM('headdetalis');
+   
+    $where="Aemail='$email' AND Apassword='$password'";
+    $this->db->where($where);
+
+                   $q =$this->db->get();
                 
-                   
+                   $session=array();
                     if($q->num_rows())
                     {
-                        return $q->row()->Authorisedpt;
+                       $session=array('Authorisedpt'=>$q->row()->Authorisedpt,'Aemail'=>$q->row()->Aemail);
+                       return $session;
     
                     }
                     else

@@ -1,14 +1,6 @@
 <?php include ('header.php');?>
 <html>
     <head>
-    <style>
-     #form{
-     box-shadow: 5px 10px 18px #888888;
-     
-  padding: 6px;
-    margin-top: 10%;
-}
-    </style>
       <script>
         fuction back()
         {
@@ -17,7 +9,7 @@
         </script>
     <link href="<?= base_url();?>assets/css/bootstrap-4.2.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?= base_url();?>assets/css/bootstrap-4.2.1/js/bootstrap.min.js" rel="stylesheet">
-    
+<link rel="stylesheet" href="<?= base_url();?>assets/css/forget.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   
@@ -30,40 +22,27 @@
             <div class="col-lg-4">
             
 
-        <?php echo form_open('user/reenterpass','id="form" style="margin-top:10%;margin-bottom:89px;"');?>
+        <?php echo form_open('admin/reenterpass','id="form" style="margin-top:10%;margin-bottom:89px;"','method=>"post"');?>
   <fieldset>
  <div class="form-group">
+ 
       <label for="InputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"name="femail">
-      <?php echo form_error('femail') ?>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"name="femail" >
+      <?php echo form_error('femail') ;?><?php if($error=$this->session->flashdata('email_match')): ?>
+      <div class="row">
+      <div class="col-lg-12"style="margin-left:80px;">
+        <p class="text-danger"><?php echo $error ?></p>
+      </div>
+      </div>
+<?php endif;?>
     </div>
-    <div class="form-group">
-      <label for="InputPassword1">Security Quetion</label>
-      <select class="form-control" id="sel1"name="sq1" >
-        <option>Select One</option>
-        <option value="what is your pet name?">what is your pet name?</option>
-        <option value="what is your favorate city name?">what is your favorate city name?</option>
-        <option value="c">what is your first teacher name?</option>
-        <option value="q">what is your favorate colour name?</option>
-        <option value="r" >what is your favorate book name?</option>
-      </select><?php echo form_error('sq1') ?>
-      <input type="text"class="form-control" placeholder="Answer..."name="ans1"><?php echo form_error('ans1') ?> <br>
-      <select class="form-control" id="sel1"name="sq2" >
-        <option>Select One</option>
-        <option value="what is your pet name?">what is your pet name?</option>
-        <option value="what is your favorate city name?">what is your favorate city name?</option>
-        <option value="c">what is your first teacher name?</option>
-        <option value="q">what is your favorate colour name?</option>
-        <option value="r" >what is your favorate book name?</option>
-      </select><?php echo form_error('sq2') ?>
-      
-      <input type="text"class="form-control" placeholder="Answer..."name="ans2"> <?php echo form_error('ans2') ?>
-    </div>
+    
    
     </fieldset>
     
     <button type="submit" class="btn btn-info" >Submit</button>
-    <button type="submit" class="btn btn-info" >Back</button>
+    
+    <?php echo anchor('Admin/logout','Back','class="btn btn-info"') ;?>
  
 
 </div>
@@ -90,6 +69,42 @@
   </div>
   
 </div>
+
+<script>
+
+$(document).ready(function () {
+    security_Que1();
+             $("#securityQuestion").change(function () {
+              security_Que1($(this).val() );
+    });
+    $("#securityQuestion2").change(function () {
+    security_Que2($(this).val() );
+    });
+});
+
+function security_Que1(p){
+
+  $(`#securityQuestion2 option[value="${p}"]`).closest('option').hide();
+
+  $('#securityQuestion2').find('option').each(function() {
+    if($(this).val()!=p)
+  {
+  $(`#securityQuestion2 option[value="${$(this).val()}"]`).closest('option').show();
+  }
+});
+};
+function security_Que2(p){
+
+$(`#securityQuestion option[value="${p}"]`).closest('option').hide();
+
+$('#securityQuestion').find('option').each(function() {
+  if($(this).val()!=p)
+{
+$(`#securityQuestion option[value="${$(this).val()}"]`).closest('option').show();
+}
+});
+};
+</script>
 
 <?php include('footer.php');?>
 </body>

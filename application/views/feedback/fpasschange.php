@@ -9,7 +9,7 @@
 <body>
 <div class="rows">
             <div class="col-lg-12">
-               <?php echo form_open('admin/reenterpass1','id="form" style="margin-top:5%;margin-bottom:15%;"');?>
+               <?php echo form_open('user/changedpassword','id="form" style="margin-top:5%;margin-bottom:15%;"');?>
         
   <fieldset>
   <!-- <div class="form-group">
@@ -18,44 +18,38 @@
      
       <?php //echo form_error('cemail') ?>
     </div> -->
- <div class="form-group">
+ <!-- <div class="form-group">
       
-      <?php echo form_label('Current Password','InputPassword1');?>
-      <i onclick="show1();" class="fa fa-eye f" id="eye1"></i> 
-      <?php echo form_password(['class'=>'form-control','placeholder'=>"Enter Current Password",'value'=>set_value('pass1'),'id'=>"exampleInputpassword1",'name'=>"pass1"]);?>
-      <?php echo form_error('pass1') ?><?php if($error=$this->session->flashdata('change_password')): ?>
-      <div class="row">
-      <div class="col-lg-12"style="margin-left:20px;margin-bottom:0px;padding:0px;">
-        <div class="text-danger"><?php echo $error ?></div>
-      </div>
-      </div>
-<?php endif;?>
+      <?php //echo form_label('Current Password','InputPassword1');?>
+      <?php //echo form_password(['class'=>'form-control','placeholder'=>"Enter Current Password",'id'=>"exampleInputpassword1",'name'=>"pass1"]);?>
+      <?php //echo form_error('pass1') ?>
      
-    </div>
-    <div class="form-group">
+    </div> -->
+    <div class="form-group ">
       
       <?php echo form_label('New Password','InputPassword2');?>
-      <i onclick="show2();" class="fa fa-eye f" id="eye1"></i> 
+      <i onclick="show1();" class="fa fa-eye f" id="eye1"></i>
       <?php echo form_password(['class'=>'form-control','placeholder'=>"Enter New password",'id'=>"exampleInputpassword2",'name'=>"pass2"]);?>
       <?php echo form_error('pass2') ?>
        
        
        <?php echo form_label('Re-enter Password','InputPassword2');?>
-       <i onclick="show3();" class="fa fa-eye f" id="eye2"></i> 
+       <i onclick="show2();" class="fa fa-eye f" id="eye1"></i>
        <?php echo form_password(['class'=>'form-control','placeholder'=>"Re-enter Password",'id'=>"exampleInputpassword3",'name'=>"pass3"]);?>
        <?php echo form_error('pass3') ?>
       
       
     </div>
-   <div class="form-group button_group">
+    <div class="form-group button_group">
    <?php echo form_button(['class'=>"btn btn-info",'type'=>"submit",'content'=>"Submit"]);?>
     
-    <?php echo anchor('admin/dashboard','Back','class="btn btn-info"') ;?>
+    <?php echo anchor('user/forget','Back','class="btn btn-info"') ;?>
 
       </div>
-    
-    
     </fieldset>
+   
+    
+ 
 </form>
 </div>
 
@@ -65,7 +59,7 @@
  function show1()
 {
     
-    var eye=document.getElementById('exampleInputpassword1');
+    var eye=document.getElementById('exampleInputpassword2');
 
    if (eye.type=="password"){
     eye.type="text";}
@@ -75,16 +69,6 @@
 function show2()
 {
     
-    var eye=document.getElementById('exampleInputpassword2');
-
-   if (eye.type=="password"){
-    eye.type="text";}
-    else{
-    eye.type="Password";}
-}
-function show3()
-{
-    var pd=document.getElementById('pdw');
     var eye=document.getElementById('exampleInputpassword3');
 
    if (eye.type=="password"){
@@ -93,5 +77,6 @@ function show3()
     eye.type="Password";}
 }
 </script>
+
 </html>
 <?php include ('footer.php');?>

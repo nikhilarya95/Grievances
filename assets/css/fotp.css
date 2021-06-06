@@ -11,8 +11,8 @@
     padding: 10px;
     margin: 70px;
     width: 35%;
-    
-    position: absolute;
+    border-radius: 3px;
+    position: relative;
     left:25%;
     text-align: center;
 }
@@ -23,17 +23,48 @@
 
 .otp_input{
     margin: 2px;
-
+    width: 70%;
+    margin-left: 15%;
 }
 
 .otp_button{
     
-    margin:2px;
-    width: 100%;
+    margin: 15px;
+    margin-left: 90px;
+    width: 70%;
 }
+
+.resend_btn{
+    background-color:#5bc0de;
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    position: absolute;
+    top: 67%;
+    left:31%;
+    box-shadow: 2px 4px 6px #888888;
+
+}
+
+.resend_btn:hover{
+    text-decoration: none;
+    color:white;
+    background-color:#31b0d5;
+}
+
+/* .btn{
+    margin: 2% 3%;
+    padding: 2%;
+    border-radius: 5px;
+    
+    box-shadow: 2px 2px 5px #888888;
+    font-size: 16px !important;
+ } */
 .otp_button > input{
     box-shadow: 2px 4px 6px #888888;
-    margin-top: 15px;
+    
 }
 
 @media screen and (max-width:480px) 

@@ -3,7 +3,7 @@
 
 <?php 
     // Setting up connection with database Geeks 
-    $connection = mysqli_connect('localhost', 'root',"",'kec1'); 
+    $connection = mysqli_connect('localhost:3300', 'root',"",'kec1'); 
       
     // Check connection 
     if (mysqli_connect_errno()) 
@@ -111,7 +111,7 @@
 
 </head>
 <body >
-<div class="loader"></div>
+
 <div class="container-fluid ">
 <div class="form-row"style="margin-top:1%;">
 <div class="col-sm-12">
@@ -124,13 +124,13 @@
           <option value="HOD">HOD</option></select> -->
           
         
-          <a class="loginLink" href="<?= base_url();?>user/login"><button class="btn btn-danger loginButton" id="h">Login</button></a>
+          <!-- <a class="loginLink" href="<?= base_url();?>user/login"><button class="btn btn-danger loginButton" id="h">Admin Login</button></a> -->
 
       </div>
       
 </div>
 </div>
-<div id="main">
+<!-- <div id="main">
     <div class="sideBar_button" id="sideBar_button"onclick="sideBar_open()"> ☰ </div>
 </div>
 <div class=" bg-info tab tabList" id="sideBar">
@@ -141,13 +141,13 @@
   <button class="tablinks  tabButton" onclick="dash(event, 'Staff'),SideBar_close()">Staff</button>
   <button class="tablinks  tabButton" onclick="dash(event, 'Parent'),SideBar_close()">Parents</button>
   <button class="tablinks  tabButton" onclick="dash(event, 'Alumni'),SideBar_close()">Alumni</button>
-  <!--<button class="tablinks btn " onclick="dash(event, 'Employer')">Employer</button>-->
-</div>
+  <button class="tablinks btn " onclick="dash(event, 'Employer')">Employer</button>
+</div> -->
 
 <div class="tabcontent" id="Home" style>
   
     <div class="tabcontent_info1">
-        <h3 class="text-uppercase">Pandding Grievances</h3>
+        <h3 class="text-uppercase">Pending Grievances</h3>
         <h3 class="display-4"><?php echo $row1;?></h3>
     </div>
 
@@ -163,7 +163,7 @@
 </div>
                             
 
-<div id="Student" class="tabcontent">
+<!-- <div id="Student" class="tabcontent">
   
     <div class="tabcontent_info1">
         <h3 class="text-uppercase">Pandding Grievances</h3>
@@ -255,21 +255,23 @@
 </div>
 
 
-<div  style="margin-left:70px;margin-top:;border:none;"id="Employer" class="tabcontent">
+    <div  style="margin-left:70px;margin-top:;border:none;"id="Employer" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright"></span>
   
+  </div> -->
+
+  
+  <div class="login-form">
+  <?php include ('login.php');?>
   </div>
-
-
 
 
                      
 
-<div class="addGrievances">
-  <p><?php echo anchor('user/stu','Click here for your Grievances') ?>
-</p>
+    <div class="addGrievances">
+        <p class="a-text"><?php echo anchor('user/student_details','Click here for your Grievances') ?></p>
 
-  </div>
+    </div>
   
 </div>
 
@@ -277,28 +279,28 @@
 
 
 <script>
-function dash(evt,Name) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+// function dash(evt,Name) {
+//   var i, tabcontent, tablinks;
+//   tabcontent = document.getElementsByClassName("tabcontent");
+//   for (i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
+//   tablinks = document.getElementsByClassName("tablinks");
+//   for (i = 0; i < tablinks.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 //   alert(document.getElementById("sideBar_button").style.display)
-  if(window.matchMedia("(max-width:964px)").matches)
-  {
-    document.getElementById(Name).style.display = "block";
-  evt.currentTarget.className += " active";
-  }
-  else{
-    document.getElementById(Name).style.display = "flex";
-  evt.currentTarget.className += " active";
-  }
+//   if(window.matchMedia("(max-width:964px)").matches)
+//   {
+//     document.getElementById(Name).style.display = "block";
+//   evt.currentTarget.className += " active";
+//   }
+//   else{
+//     document.getElementById(Name).style.display = "flex";
+//   evt.currentTarget.className += " active";
+//   }
 
-}
+// }
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
@@ -347,6 +349,6 @@ function SideBar_close() {
     
 // }
 </script>
-   
+<?php include('footer.php');?>
 </body>
 </html> 

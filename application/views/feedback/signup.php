@@ -2,8 +2,8 @@
 <html>
 <head>
 
-        <link href="<?= base_url();?>assets/css/bootstrap-4.2.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?= base_url();?>assets/css/bootstrap-4.2.1/js/bootstrap.min.js" rel="stylesheet">
+        <link href="<?= base_url();?>assets/css/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?= base_url();?>assets/css/bootstrap-3.3.6/js/bootstrap.min.js" rel="stylesheet">
       
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         
@@ -254,145 +254,149 @@ function Errors(errors)
 		
         <div class="form-header">
 			<p style="font-size:259%;">Sign Up</p>
-		</div>
-
-        <div class="form-group">
-		    <div class="formAuthorise" >
-                <select class="form-control" name="tle" >
-                    <option>Authorise</option>
-                    <optgroup label="SBMS">
-                        <option value="Civil Engineering">Civil Engineering</option>
-                        <option value="Mechanical Engineering">Mechanical Engineering</option>
-                        <option value="Mechatronics Engineering">Mechatronics Engineering</option>
-                        <option value="Automobile Engineering">Automobile Engineering</option>
-                    </optgroup>
-                    <optgroup label="SES">
-                        <option value="EEE">EEE</option>
-                        <option value="E and I">E and I</option>
-                    </optgroup>
-                    
-                    <optgroup label="SCCS">
-                        <option value="ECE">ECE</option>
-                        <option value="CSE">CSE</option>
-                        <option value="IT">IT</option>
-                    </optgroup>
-                    
-                    <optgroup label="SCFS">
-                        <option value="Chemical Engineering">Chemical Engineering</option>
-                        <option value="Food Technology">Food Technology</option>
-                    </optgroup >
-                    
-                    <optgroup label="SMS">
-                        <option value="Management Studies">Management Studies</option>
-                    </optgroup>
-                    
-                    <optgroup label="SCTA">
-                        <option value="Computer Application">Computer Application</option>
-                        <option value="Computer Technology(UG)">Computer Technology(UG)</option>
-                        <option value="Computer Technology(PG)">Computer Technology(PG)</option>
-                    </optgroup>
-                    
-                    <optgroup label="SSH">
-                        <option value="Mathematics">Mathematics</option>
-                        <option value="Physics">Physics</option>
-                        <option value="Chemistry">Chemistry</option>
-                        <option value="English">English</option>
-                    </optgroup>
-                    
-                    <optgroup label="">
-                        <option value="DSBMS">DEAN(SBMS)</option>
-                        <option value="DSES">DEAN(SES)</option>
-                        <option value="DSCCS">DEAN(SCCS)</option>
-                        <option value="DSCFS">DEAN(SCFS)</option>
-                        <option value="DSSH">DEAN(SSH)</option>
-                        <option value="Principal">Principal</option>
-                        <option value="Libarian">Libarian</option>
-                        <option value="Transport Officer<">Transport Officer</option>
-                    </optgroup>
-
-                    <optgroup label="Hostel warden">
-                        <option value="Dheeran">Dheeran</option>
-                        <option value="Ilango">Ilango</option>
-                        <option value="Bharathi">Bharathi</option>
-                        <option value="Valluvar">Valluvar</option>
-                        <option value="Kamban">Kamban</option>
-                        <option value="Ponnar">Ponnar</option>
-                        <option value="Sankar">Sankar</option>
-                        <option value="Vaigai">Vaigai</option>
-                        <option value="Bhavani">Bhavani</option>
-                        <option value="Kaveri">Kaveri</option>
-                        <option value="Amaravathi">Amaravathi</option>
-                        <option value="other">other</option>
-                    </optgroup>
-                </select>
-                <?php echo form_error('tle') ?>
-            </div>
-            
-            <div class="formFaculty_id">
-                <?php echo  form_input(['class'=>"form-control ",'type'=>"text",'id'=>"",'name'=>'Faculty_id','placeholder'=>"Faculty_id"])?>
-                <?php echo form_error('Faculty_id') ?>
-            </div>
-           
         </div>
-        
-        
-        <?php echo form_label('Faculty Name');?>
-        <div class="form-group">
-            
-            <div class="formFucaltyName_title">
-                <select  name="tle1"style="" >
-                    <option >Mr</option>
-                    <option >Dr</option>
-                    <option >Miss</option>
-                </select> 
-                
-            </div>
+            <div class="form-body">  
 
-            <div class="formFucalty_firstName">
+            <div class="rows" >    
+                <div class="formAuthorise" >
+                    <select class="form-control" name="tle" >
+                        <option>Authorise</option>
+                        <optgroup label="SBMS">
+                            <option value="Civil Engineering">Civil Engineering</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                            <option value="Mechatronics Engineering">Mechatronics Engineering</option>
+                            <option value="Automobile Engineering">Automobile Engineering</option>
+                        </optgroup>
+                        <optgroup label="SES">
+                            <option value="EEE">EEE</option>
+                            <option value="E and I">E and I</option>
+                        </optgroup>
+            
+                        <optgroup label="SCCS">
+                            <option value="ECE">ECE</option>
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                        </optgroup>
+                        
+                        <optgroup label="SCFS">
+                            <option value="Chemical Engineering">Chemical Engineering</option>
+                            <option value="Food Technology">Food Technology</option>
+                        </optgroup >
+                        
+                        <optgroup label="SMS">
+                            <option value="Management Studies">Management Studies</option>
+                        </optgroup>
+                        
+                        <optgroup label="SCTA">
+                            <option value="Computer Application">Computer Application</option>
+                            <option value="Computer Technology(UG)">Computer Technology(UG)</option>
+                            <option value="Computer Technology(PG)">Computer Technology(PG)</option>
+                        </optgroup>
+                        
+                        <optgroup label="SSH">
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="English">English</option>
+                        </optgroup>
+                        
+                        <optgroup label="">
+                            <option value="DSBMS">DEAN(SBMS)</option>
+                            <option value="DSES">DEAN(SES)</option>
+                            <option value="DSCCS">DEAN(SCCS)</option>
+                            <option value="DSCFS">DEAN(SCFS)</option>
+                            <option value="DSSH">DEAN(SSH)</option>
+                            <option value="Principal">Principal</option>
+                            <option value="Libarian">Libarian</option>
+                            <option value="Transport Officer<">Transport Officer</option>
+                        </optgroup>
+
+                        <optgroup label="Hostel warden">
+                            <option value="Dheeran">Dheeran</option>
+                            <option value="Ilango">Ilango</option>
+                            <option value="Bharathi">Bharathi</option>
+                            <option value="Valluvar">Valluvar</option>
+                            <option value="Kamban">Kamban</option>
+                            <option value="Ponnar">Ponnar</option>
+                            <option value="Sankar">Sankar</option>
+                            <option value="Vaigai">Vaigai</option>
+                            <option value="Bhavani">Bhavani</option>
+                            <option value="Kaveri">Kaveri</option>
+                            <option value="Amaravathi">Amaravathi</option>
+                            <option value="other">other</option>
+                        </optgroup>
+                    </select>
+                    <?php echo form_error('tle') ?>
+                </div>
+            
+                <div class="formFaculty_id">
+                    <?php echo  form_input(['class'=>"form-control ",'type'=>"text",'id'=>"",'name'=>'Faculty_id','placeholder'=>"Faculty_id"])?>
+                    <?php echo form_error('Faculty_id') ?>
+                </div>
+            </div>
+            <?php echo form_label('Faculty Name')?>
+            <div class="rows" >
+                
+            
+                
+                <div class="formFucaltyName_title">
+                
+                    <select  name="tle1" >
+                        <option >Mr</option>
+                        <option >Dr</option>
+                        <option >Miss</option>
+                    </select> 
+                </div>
+            
+                <div class="formFucalty_firstName">
                 <!--<i class="fa fa-times fac_a "id="fac_1"></i>
                 <i class="fa fa-check fac_b"id="fac_2"></i>-->
-                <?php echo  form_input(['class'=>"form-control ",'type'=>"text",'id'=>"bor_1",'placeholder'=>"Enter First Name",'value'=>set_value('firstname'),'onblur'=>"fact();",'onfocus'=>"cl1();",' name'=>"firstname"]);?>
-                <?php echo form_error('firstname') ?>
+                    <?php echo  form_input(['class'=>"form-control ",'type'=>"text",'id'=>"bor_1",'placeholder'=>"Enter First Name",'value'=>set_value('firstname'),'onblur'=>"fact();",'onfocus'=>"cl1();",' name'=>"firstname"]);?>
+                    <?php echo form_error('firstname') ?>
+                </div>
+            
+                <div class="formFucalty_lastName" >
+                    <?php echo  form_input(['class'=>"form-control ",'type'=>"text",'id'=>"bor_1",'placeholder'=>"Enter Last Name",'onblur'=>"fact();",'value'=>set_value('lastname'),'onfocus'=>"cl1();",' name'=>"lastname"]);?>
+                    <?php echo form_error('lastname') ?>
+                </div>
             </div>
+
+            <div class="rows" >
+                <div class="formFucalty_mobile" >	
+                    <?php echo form_label('Mobile Number');?>
+                    <!-- <i class="fa fa-times mo_a"id="mob_1"></i>
+                    <i class="fa fa-check mo_b"id="mob_2"></i>-->
+                    <?php echo  form_input(['class'=>"form-control",'type'=>"text",'id'=>"bor_2",'value'=>set_value('mobile1'),'placeholder'=>"Enter 10 digit mobile",'onblur'=>"mobb();",'onfocus'=>"cl2();",' name'=>"mobile1"]);?>
+                    <?php echo form_error('mobile1') ?>
+                </div>
             
-            <div class="formFucalty_lastName" >
-                <?php echo  form_input(['class'=>"form-control ",'type'=>"text",'id'=>"bor_1",'placeholder'=>"Enter Last Name",'onblur'=>"fact();",'value'=>set_value('lastname'),'onfocus'=>"cl1();",' name'=>"lastname"]);?>
-                <?php echo form_error('lastname') ?>
+                <div class="formFucalty_email">
+    
+                    <?php echo form_label('Email ID');?>
+                    <!-- <i class="fa fa-times emai_a"id="email_1"></i>
+                    <i class="fa fa-check emai_b"id="email_2"></i>-->
+    
+                    <?php echo  form_input(['class'=>"form-control",'type'=>"email",'value'=>set_value('email1'),'id'=>"bor_3",'placeholder'=>"eg:-xyz@kongu.edu",'onblur'=>"ema();",'onfocus'=>"cl3();",' name'=>"email1"]);?>
+                    <?php echo form_error('email1') ?>
+                </div>
             </div>
 
-            
-            
-        </div>
+            <div class="rows">
+                <div class="formFucalty_button">
+                    <button  type='submit' href="b" class='btn btn-primary formVerify_button' value="sign_submit" data-toggle='modal' data-target='#myModal'>
+                    Verify</button>
 
+                    <!--<button Style="color:white;margin-left:75%;"class="btn btn-info" id="h"><a Style="color:white; font-size:15px;text-decoration:none;" href="http://localhost/kec1/index.php/user/home">Verify</a>
+                    </button>-->
+                </div>
+            </div>
 
-               
-        <div class="form-group" >	
-        <?php echo form_label('Mobile Number');?>
-          <!-- <i class="fa fa-times mo_a"id="mob_1"></i>
-           <i class="fa fa-check mo_b"id="mob_2"></i>-->
-        	<?php echo  form_input(['class'=>"form-control",'type'=>"text",'id'=>"bor_2",'value'=>set_value('mobile1'),'placeholder'=>"Enter 10 digit mobile",'onblur'=>"mobb();",'onfocus'=>"cl2();",' name'=>"mobile1"]);?>
-            <?php echo form_error('mobile1') ?>
-        </div>
-
-        <div class="form-group">
-			
-            <?php echo form_label('Email ID');?>
-            <!-- <i class="fa fa-times emai_a"id="email_1"></i>
-            <i class="fa fa-check emai_b"id="email_2"></i>-->
-        	
-            <?php echo  form_input(['class'=>"form-control",'type'=>"email",'value'=>set_value('email1'),'id'=>"bor_3",'placeholder'=>"eg:-xyz@kongu.edu",'onblur'=>"ema();",'onfocus'=>"cl3();",' name'=>"email1"]);?>
-            <?php echo form_error('email1') ?>
-        </div>
-        <div class="form-group">
-            <button  type='submit' href="b" class='btn btn-primary formVerify_button' value="sign_submit" data-toggle='modal' data-target='#myModal'>
-         Verify</button>
-          
-            <!--<button Style="color:white;margin-left:75%;"class="btn btn-info" id="h"><a Style="color:white; font-size:15px;text-decoration:none;" href="http://localhost/kec1/index.php/user/home">Verify</a>
-            </button>-->
-        </div> 
-        <div id="new" class="text-center small">Already have an account?
-            <a href="http://localhost/kec1/index.php/user/home">Login here</a>
-        </div>	
+            <div class="rows" >
+                <div id="new" class="text-center small">Already have an account?
+                    <a href="<?= base_url();?>user/login">Login here</a>
+                </div>
+            </div>       
+</div>
     </form>
 
     </div>

@@ -3,69 +3,86 @@
 .signup_form{
     box-shadow: 5px 10px 18px #888888;
     margin: 40px;
-    width: 60%;
+    width: 40%;
     position: absolute;
-    left: 15%;
+    left: 27%;
     padding: 6px;
    
 }
 
-.form-group{
-    align-content: stretch;
-}
 
-.signup_form > .form-group > input{
-    margin: 5px;
-}
 
 .formAuthorise{
-    width: 49%;
-    float: left;
+    width: 100%;
+    margin: 8px;
 }
 
 .formFaculty_id{
-    width:49%;
-    position: sticky;
-    float: right;
-    left:50%;
-    top:-73px;
+    width: 100%;
+    margin: 8px;
 }
 
 .formFucaltyName_title{
-    width: 10%;
-    position:sticky;
-    float: left;
+    
+    width: auto;
+    margin: 5px;
+    
 }
 
-.formFucaltyName_title > select {
-    height:30px;
+
+
+.formFucaltyName_title > select:visited{
+   border:1px solid #03a3ff;
 }
 
+.formFucaltyName_title > select{
+    padding: 5px;
+    font-size: 15px;
+    height:32px;
+    border-radius: 3px;
+    border:1px solid #c9c7c7;
+    box-shadow:0px .1px 1px #888888 inset;
+    
+}
+.form-body{
+   margin: 0% 5%;
+}
+.rows{
+    display: flex;
+    
+}
 .formFucalty_firstName{
-    position: sticky;
-    width:44%;
-    float: left;
-      
+    width: 100%;
+    margin: 5px;
 }
 
 .formFucalty_lastName{
-    position: sticky;
-    float:right;
-    width:44%;
-    
-
+    width: 100%;
+    margin: 5px;
+   
 }
 
-.formVerify_button
-{
-    
-    position: sticky;
-    left:500px;
+.formFucalty_mobile{
+    width:100%;
+    margin: 5px;
 }
 
-#from .btn{
-   margin-left: 10%;
-   box-shadow: 2px 2px 5px #888888;
+.formFucalty_email{
+    width:100%;
+    margin: 5px;
+   
+}
+
+.formFucalty_button {
+   
+   margin: 1% 0% 2% 40%;
+   
+  
+}
+
+button{
+    width: 160px;
+    box-shadow: 2px 2px 5px #888888;
 }
 
 
@@ -177,46 +194,23 @@ color:green;
 
 }
 
-@media screen and (max-width:1000px)
+ @media (max-width:900px)
 {
-    /* .form-group > input{
+    .rows{
+        display: block;
         margin: 15px;
-    } */
+    }
 
-    .formAuthorise{
-        width: 100%;
+    .formFucalty_button {
+   
+        margin:0px;
         
-    }
+       
+     }
 
-    .formAuthorise > select > optgroup,option{
-        width: 50%;
-    }
-    
-    .formFaculty_id{
-        width:100%;
-        position: static;
-        /* left:50%;
-        top:102px; */
-    }
-    
-    .formFucaltyName_title{
+    button{
         width: 100%;
-        position: static;
-    }
-
-    .formFucalty_firstName{
-        position: static;
-        width:100%;
-        /* left:10%;
-        top:36%;    */
-    }
-    
-    .formFucalty_lastName{
-        position: static;
-        width:100%;
-        /* left:55%;
-        top:36%; */
-    
+        box-shadow: 2px 2px 5px #888888;
     }
 
 }

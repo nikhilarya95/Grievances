@@ -1,7 +1,7 @@
 <?php include('header.php');?>
 <?php 
                     // Setting up connection with database Geeks 
-                    $connection = mysqli_connect('localhost', 'root',"",'kec1'); 
+                    $connection = mysqli_connect('localhost:3300', 'root',"",'kec1'); 
       
                     // Check connection 
                     if (mysqli_connect_errno()) 
@@ -40,7 +40,9 @@
 </head>
 <body>
 <div class="container-fluid ">
-
+<div class="button">
+<?php echo anchor('Admin/logout','Home','class="btn btn-info"') ;?>
+</div>
     <div class="grievance_display">
          <?php 
         if($this->uri->segment(2) == "inserted")
@@ -140,11 +142,12 @@
                     <option value="Mechanical Engineering">Mechanical Engineering</option>
                     <option value="Mechatronics Engineering">Mechatronics Engineering</option>
                     <option value="Automobile Engineering">Automobile Engineering</option>
-                    <option value="EEE">EEE</option>
-                    <option value="E & I">E & I</option>
-                    <option value="ECE">ECE</option>
-                    <option value="CSE">CSE</option>
-                    <option value="IT">IT</option>
+                    <option value="Electrical & Electronics Engineering">Electrical & Electronics Engineering</option>
+                    <option value="Electrical & Instrumentation">Electrical & Instrumentation</option>
+                    <option value="Electrical Communication Engineering">Electrical Communication Engineering</option>
+                    <option value="Computer Science Engineering">Computer Science Engineering</option>
+                    <option value="Information Technology">Information Technology</option>
+        
                     <option value="Chemical Engineering">Chemical Engineering</option>
                     <option value="Food Technology">Food Technology</option>
                     <option value="Management Studies">Management Studies</option>
@@ -200,6 +203,7 @@
             </div>
             <div class="modal-footer">
                 <input class=" btn btn-info fon" type="submit" onClick="" value='POST'name="submit_gri">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -212,6 +216,7 @@
      <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal">&times;</button>
       <h4 class="modal-title">Add User</h4>
+
      </div>
      <div class="modal-body">
 
@@ -272,7 +277,7 @@ $(document).ready(function () {
  $(document).on('click', '.updat', function(){
   var id = $(this).attr("id");
   $('#userModal').modal('show');
-  $('.modal-title').text('Solution Of your Grievance');
+  $('.modal-title').text('Your Greivance');
   var idd =$('#GSolution').val(id);
  });
 
